@@ -24,7 +24,6 @@ export class SingleEntryComponent implements OnInit {
   });
 }
 
-
   getEntry(id) {
     this.JournalService.getEntry(id)
       .subscribe((entry) => {
