@@ -8,15 +8,20 @@ import { JournalService } from '../journal.service';
   providers: [JournalService]
 })
 export class EntryFormComponent implements OnInit {
+  jsonForm: Object;
 
   constructor( private JournalService: JournalService) { }
 
   ngOnInit() {
   }
 
-  submitForm(myForm) {
-
-    this.JournalService.createEntry();
+  onSubmit(myForm) {
+    this.jsonForm = JSON.stringify({
+      title: myForm.title,
+      content: myForm.content
+    });
+    console.log(this.jsonForm);
+    this.JournalService.createEntry(this.jsonForm);
   }
 
 }

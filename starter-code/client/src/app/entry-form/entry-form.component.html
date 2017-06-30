@@ -2,11 +2,11 @@
 
 <h3>Create New Entry</h3>
 
-<form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+<form (ngSubmit)="onSubmit(myForm.value)" #myForm="ngForm">
   <p>Title:
     <input type="text" name="title" [(ngModel)]="title" #myTitle="ngModel">
   </p>
-  <p>Title:
+  <p>Content:
     <input type="text" name="content" [(ngModel)]="content" #myContent="ngModel">
   </p>
   <button type="submit"> Create Entry</button>

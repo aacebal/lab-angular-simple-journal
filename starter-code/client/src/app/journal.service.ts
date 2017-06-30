@@ -15,8 +15,8 @@ export class JournalService {
       .map((res) => res.json());
   }
 
-  createEntry() {
-    return this.http.post(`${this.BASE_URL}/api/journal-entries`, this.body)
+  createEntry(body) {
+    return this.http.post(`${this.BASE_URL}/api/journal-entries --header "Content-Type: application/json"`, body);
   }
 
   getEntry(id) {
