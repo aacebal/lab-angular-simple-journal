@@ -1,0 +1,13 @@
+<a [routerLink]="['']">Back Home</a>
+
+<h3>Create New Entry</h3>
+
+<form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+  <p>Title:
+    <input type="text" name="title" [(ngModel)]="title" #myTitle="ngModel">
+  </p>
+  <p>Title:
+    <input type="text" name="content" [(ngModel)]="content" #myContent="ngModel">
+  </p>
+  <button type="submit"> Create Entry</button>
+</form>

@@ -8,12 +8,14 @@ import { routes } from './app.routing';
 import { AppComponent } from './app.component';
 import { EntryListComponent } from './entry-list/entry-list.component';
 import { SingleEntryComponent } from './single-entry/single-entry.component';
+import { EntryFormComponent } from './entry-form/entry-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EntryListComponent,
-    SingleEntryComponent
+    SingleEntryComponent,
+    EntryFormComponent
   ],
   imports: [
     BrowserModule,
