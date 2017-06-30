@@ -5,6 +5,6 @@ import { SingleEntryComponent } from './single-entry/single-entry.component';
 
 export const routes: Routes = [
     { path: '', component: EntryListComponent },
-    { path: 'journal-entry/:id', component: SingleEntryComponent },
+    { path: 'journal-entries/:id', component: SingleEntryComponent },
     { path: '**', redirectTo: '' }
 ];
