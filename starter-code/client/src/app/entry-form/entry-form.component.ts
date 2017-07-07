@@ -16,12 +16,11 @@ export class EntryFormComponent implements OnInit {
   }
 
   onSubmit(myForm) {
-    this.jsonForm = JSON.stringify({
+    const newEntry = {
       title: myForm.title,
       content: myForm.content
-    });
-    console.log(this.jsonForm);
-    this.JournalService.createEntry(this.jsonForm);
+    }
+    this.JournalService.createEntry(newEntry).subscribe();
   }
 
 }

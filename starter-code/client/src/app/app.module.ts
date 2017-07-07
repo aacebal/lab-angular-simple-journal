@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from "@angular/router";
 import { routes } from './app.routing';
 
+import { JournalService } from './journal.service'
 import { AppComponent } from './app.component';
 import { EntryListComponent } from './entry-list/entry-list.component';
 import { SingleEntryComponent } from './single-entry/single-entry.component';
@@ -23,7 +24,7 @@ import { EntryFormComponent } from './entry-form/entry-form.component';
     HttpModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [JournalService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

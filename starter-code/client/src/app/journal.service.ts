@@ -4,7 +4,6 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 export class JournalService {
-  body: any;
 
   BASE_URL: string = 'http://localhost:3000';
 
@@ -15,8 +14,8 @@ export class JournalService {
       .map((res) => res.json());
   }
 
-  createEntry(body) {
-    return this.http.post(`${this.BASE_URL}/api/journal-entries --header "Content-Type: application/json"`, body);
+  createEntry(newEntry) {
+    return this.http.post(`${this.BASE_URL}/api/journal-entries`, newEntry);
   }
 
   getEntry(id) {
